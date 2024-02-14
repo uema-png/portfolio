@@ -1,0 +1,527 @@
+@charset "UTF-8";
+
+body{
+	font-family: 'Noto Serif JP', serif;
+}
+
+/*  --------- start motion --------- */
+
+/* その場でふわっと出現 */
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*下からふわっと登場*/
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:0.9s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+
+
+
+/*  --------- startヘッダー --------- */
+.header{
+	background: #ECE8E8;
+}
+
+.container{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 28px;
+}
+
+.header > .container{
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+
+
+/* ロゴ  */
+.logo_area_header{
+	display: block;
+}
+
+.logo_area_header .header_logo img{
+	height: 38px;
+	vertical-align: bottom;
+}
+
+
+/* ナビゲーション  */
+.nav_area_header{
+	margin-left: auto;
+}
+
+/*リストナビ*/
+
+.list_nav_header{
+	display: flex;
+	align-items: center;
+	border-right: 1px dashed #000;
+}
+
+.list_nav_header > li{
+	border-left: 1px dashed #000;
+	list-style: none;
+	text-decoration: none;
+}
+
+.nav_area_header a{
+	display: flex;
+	align-items: center;
+	padding: 0 min(3.5vw,45px);
+	text-decoration: none;
+}
+
+.nav_area_header p{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 22px;
+	text-align: center;
+	vertical-align: bottom;
+	color: #000;
+}
+
+.nav_area_header span{
+	font-size: 15px;
+}
+
+.nav_area_header p:hover{
+	color: #666;
+}
+/* --------- endヘッダー --------- */
+
+
+/* --------- startフッター --------- */
+.footer{
+	background: #ECE8E8;
+	margin-top: 20px;/*   後から削除する！！   */
+}
+
+.footer_area{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 8vw;
+}
+
+.footer > .footer_area{
+	height: 407px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* ナビとアドレス */
+.information_area_footer{
+	display: flex;
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.information_area_footer ul > li + li{
+	margin-top: 33px;
+}
+
+
+/* ナビ */
+.nav_footer a{
+	text-decoration: none;
+	color: #000;
+}
+
+.nav_footer a:hover{
+	color: #666;
+}
+
+.nav_footer{
+	margin-right: 9vw;
+}
+
+/* アドレス */
+.address_footer{
+	font-weight: 300;
+	text-decoration: none;
+	list-style: none;
+}
+
+.address_footer span{
+	font-weight: 200;
+}
+
+/* ロゴとSNS */
+.logo_hooter{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 86px 0 10px;
+}
+
+#ing_logo_hooter{
+	margin-bottom: 18px;
+}
+
+/*   表記   */
+.notation{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.notation a{
+	font-size: 15px;
+	font-weight: 400;
+	margin-bottom: 8px;
+	text-decoration: none;
+	color: #000;
+}
+
+.notation a:hover{
+	color: #666;
+}
+
+.notation small{
+	margin-bottom: 30px;
+}
+/* --------- endフッター --------- */
+
+
+
+/* --------- start TOPページ --------- */
+/* --------- start TOPページ --------- */
+
+/*  スライダー  */
+.slide img {
+  width: 100%;
+  height: 610px;
+  object-fit: cover;
+}
+
+
+/*  幸せをあなたにtext  */
+#top_rich-text{
+	text-align: center;
+}
+
+/*タイトル*/
+#top_rich-text h1{
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 30px;
+	margin: 153px 0 60px;
+}
+
+#top_rich-text h1 span{
+	font-size: 20px;
+}
+
+/*テキスト*/
+#top_rich-text p{
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 70px;
+	padding: 0 55px;
+	line-height: 30px;
+}
+
+#top_rich-text p:nth-of-type(1){
+	margin-bottom: 30px;
+}
+
+#top_rich-text img{
+	margin: 150px 0 160px;
+}
+
+
+/*  Porta feliceのガトーショコラ  */
+#top_Porta_chocolate{
+	max-width: 1280px;
+	margin: 0 auto;
+	display: flex;
+}
+
+#top_Porta_chocolate img{
+	min-width: 50%;
+	object-fit : cover ;
+}
+
+#top_Porta_chocolate_text{
+	margin-left: 5.9vw;
+}
+
+#top_Porta_chocolate_text h2{
+	font-size: 35px;
+	font-weight: 400;
+	margin: 9.7vw 0 3vw;
+}
+
+#top_Porta_chocolate_text p{
+	font-size: 20px;
+	font-weight: 200;
+}
+
+
+/*    商品紹介   */
+/*タイトル*/
+#top_prodact h3{
+	font-size: 40px;
+	font-weight: 400;
+	text-align: center;
+	margin: 214px 0 78px;
+}
+
+/*スライダー*/
+
+#top_prodact_img{
+	margin-bottom: 190px;
+}
+
+.top_prodact_slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    margin:0 auto;
+}
+
+.top_prodact_slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
+    margin-bottom: 14px;
+}
+
+.top_prodact_slider ul{
+	margin-bottom: -30px;
+}
+
+.top_prodact_slider p{
+	font-size: 15px;
+	line-height: 24px;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.top_prodact_slider .slick-slide {
+    margin:0 26px;
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+	margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+	margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+/* --------- end TOPページ --------- */
+/* --------- end TOPページ --------- */
+
+
+/* --------- start prodactページ --------- */
+/* --------- start prodactページ --------- */
+
+#prodact{
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 10.6vw;
+}
+
+/*タイトル*/
+#prodact h1{
+	font-size: 40px;
+	font-weight: 400;
+	margin: 149px 0 83px;
+}
+
+#prodact_box_top,#prodact_box_buttom{
+	display: flex;
+	gap: 10.3vw;
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 24px;
+}
+
+#prodact_box_top img,#prodact_box_buttom img{
+	width: 100%;
+	margin-bottom: 1vw;
+}
+
+#prodact_box_buttom{
+	margin: 5.3vw 0 9.5vw;
+}
+
+
+/* --------- end prodactページ --------- */
+/* --------- end prodactページ --------- */
+
+
+
+/* --------- start about_usページ --------- */
+/* --------- start about_usページ --------- */
+#about_us{
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+/*タイトル*/
+#about_us h1{
+	margin: 226px auto 222px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 400;
+}
+
+/* 画像サイズ設定 */
+#about_us img{
+	min-width: 50%;
+	object-fit : cover ;
+}
+#about_us_img01{
+	height: 490px;
+}
+#about_us_img02{
+	height: 429px;
+}
+#about_us_img03{
+	height: 640px;
+}
+
+/*about us内容*/
+#about_us_porta_felice,#about_us_chocolate,#about_us_recommend{
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 284px;
+}
+
+#about_us_chocolate{
+	flex-direction:row-reverse
+}
+
+.about_us_text h2{
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 2.8vw;
+}
+
+.about_us_text p{
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 40px;
+}
+
+.about_us_text ul{
+	list-style:none
+}
+
+.about_us_text h3{
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.one{
+	margin: 0 2.8vw 0 5.9vw;
+}
+
+.two{
+	margin: 0 5.9vw 0 2.8vw;
+}
+
+
+/* --------- end about_usページ --------- */
+/* --------- end about_usページ --------- */
+
+
+/* --------- start accessページ --------- */
+/* --------- start accessページ --------- */
+
+
+/*タイトル*/
+#access h1{
+	margin: 226px auto 222px;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 400;
+}
+
+/*店内イメージ・テキスト*/
+#access img{
+	width: 100%;
+	height: 860px;
+	object-fit: cover;
+}
+
+#shop_text{
+	max-width: 1280px;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 50px;
+	padding: 50px 10vw 100px;
+}
+
+#access_information{
+	max-width: 1280px;
+	padding: 0 10vw;
+	margin: 0 auto 120px;
+}
+
+#access_information iframe{
+	width: 100%;
+}
+
+#access_information p{
+	font-size: 20px;
+	font-weight: 200;
+	line-height: 50px;
+	margin-top: 30px;
+	padding-right: 2.3vw;
+}
+
+#access_information span{
+	font-weight: 400;
+}
+
+
+/* --------- start accessページ --------- */
+/* --------- start accessページ --------- */
