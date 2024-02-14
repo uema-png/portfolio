@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+@media screen and ( min-width:700px ){
+	.nav_area_header_sp{
+		display: none;
+	}
+}
+
+
+@media screen and ( max-width:810px )
+{
+	.footer > .footer_area{
+	height: 630px;
+	}
+
+	/* フッターのナビとアドレス */
+	.information_area_footer{
+		display:block;
+	}
+
+	.nav_footer{
+		margin-bottom: 40px;
+		margin-left: 20px;
+	}
+
+	.logo_hooter{
+		margin-top: 275px;
+	}
+	
+}
+
+@media screen and ( max-width:700px ){
+	.nav_area_header{
+		display: none;
+	}
+
+	.container{
+		padding: 0 0 0 28px;
+	}
+
+	.header > .container{
+		justify-content: space-between;
+	}
+
+	.nav_area_header_sp{
+		justify-content: space-between;
+	}
+
+	/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+	.openbtn{/*ボタン内側の基点となるためrelativeを指定。追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+		position: relative;
+		z-index: 9999;/*ボタンを最前面に*/
+		background:#ECE8E8;
+		cursor: pointer;
+		width: 80px;
+		height:80px;	
+	}
+
+	/*ボタン内側*/
+	.openbtn span{
+		display: inline-block;
+		transition: all .4s;/*アニメーションの設定*/
+		position: absolute;
+		left: 18px;
+		height: 2px;
+		border-radius: 2px;
+		background: #000;
+		width: 44px;
+	}
+	.openbtn span:nth-of-type(1) {
+		top:24px;	
+	}
+	.openbtn span:nth-of-type(2) {
+		top:38px;
+	}
+	.openbtn span:nth-of-type(3) {
+		top:52px;
+	}
+	/*activeクラスが付与されると線が回転して×に*/
+	.openbtn.active span:nth-of-type(1) {
+	    top: 33px;
+	    left: 14px;
+	    transform: translateY(6px) rotate(-45deg);
+	    width: 50px;
+	}
+	.openbtn.active span:nth-of-type(2) {
+		opacity: 0;/*真ん中の線は透過*/
+	}
+	.openbtn.active span:nth-of-type(3){
+	    top: 45px;
+	    left: 14px;
+	    transform: translateY(-6px) rotate(45deg);
+	    width: 50px;
+	}
+
+	#g-nav{/*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+		position:fixed;
+		z-index: 999;/*ナビのスタート位置と形状*/
+		top:0;
+		right: -120%;
+		width:100%;
+		height: 100vh;/*ナビの高さ*/
+		background: #ECE8E8;/*動き*/
+		transition: all 0.6s;
+	}
+
+	/*アクティブクラスがついたら位置を0に*/
+	#g-nav.panelactive{
+		right: 0;
+    }
+
+    /*ナビゲーションの縦スクロール*/
+    #g-nav.panelactive #g-nav-list{/*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999; 
+        width: 100%;
+        height: 100vh;/*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /*ナビゲーション*/
+    #g-nav ul {/*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    /*リストのレイアウト設定*/
+    #g-nav li{
+    	list-style: none;
+    	text-align: center;
+    }
+
+    #g-nav li a{
+    	color: #333;
+    	text-decoration: none;
+    	padding:10px;
+    	display: block;
+    	text-transform: uppercase;
+    	letter-spacing: 0.1em;
+    	font-weight: bold;
+    }
+}
+
+
+
+@media screen and ( max-width:610px ){
+
+	.footer > .footer_area{
+	display: block;
+	height: 750px;
+	padding-top: 70px;
+	}
+
+	/* ナビとアドレス */
+	.information_area_footer{
+		text-align: center;
+	}
+
+	.nav_footer{
+		list-style: none;
+		margin-bottom: 80px;
+	}
+
+	.logo_hooter{
+		margin: 0 auto;
+		padding-top: 60px;
+	}
+
+	.notation{
+		margin-top: 60px;
+	}
+
+
+	/*幸せをあなたに_テキスト*/
+
+	#top_rich-text h1{
+		text-align: left;
+		padding-left: 30px;
+	}
+
+	#top_rich-text p{
+		line-height: 60px;
+		text-align: left;
+		font-size: 4.3vw;
+		padding: 0 30px;
+	}
+
+	/*Porta feliceのガトーショコラ*/
+	#top_Porta_chocolate{
+		display: block;
+	}
+
+	#top_Porta_chocolate img{
+		width: 100%;
+	}
+
+	#top_Porta_chocolate_text{
+		margin: 0;
+		padding: 0 15px;
+	}
+
+	#top_Porta_chocolate_text p{
+		font-size: 4.3vw;
+		line-height: 40px;
+
+	}
+
+
+	/*    商品紹介   */
+
+	#prodact h1{
+		font-weight: 300;
+	}
+
+	#prodact_box_top, #prodact_box_buttom{
+		display: block;
+	}
+
+	#prodact_img01{
+		margin-bottom: 100px;
+	}
+
+	/*    私たちについて   */
+
+	#about_us h1{
+		margin: 160px auto;
+	}
+
+	#about_us_porta_felice, #about_us_chocolate, #about_us_recommend{
+		display: block;
+		margin-bottom: 200px;
+	}
+
+	#about_us img{
+		width: 100%;
+	}
+
+	#about_us h2{
+		margin: 95px auto;
+	}
+
+
+	/*    アクセス    */
+	#access h1{
+		margin: 160px auto;
+	}
+
+	#access img{
+		height: 700px;
+	}
+}
